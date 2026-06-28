@@ -1,0 +1,101 @@
+ticket_id,issue_type,priority,department,region
+NT-1001,Shipping Delay,High,Billing,UK
+NT-1002,API Rate Limit,High,Infrastructure,India
+NT-1003,API Rate Limit,Critical,Billing,US
+NT-1004,Subscription Upgrade,Critical,Logistics,EU
+NT-1005,API Rate Limit,High,Logistics,UK
+NT-1006,Refund Request,Critical,Hardware,EU
+NT-1007,Shipping Delay,Critical,Infrastructure,UK
+NT-1008,Login Failure,Low,Logistics,India
+NT-1009,Subscription Upgrade,Critical,Infrastructure,India
+NT-1010,Login Failure,High,Infrastructure,US
+NT-1011,Screen Flicker,Critical,Security,US
+NT-1012,Refund Request,Critical,Billing,US
+NT-1013,API Rate Limit,Low,Billing,Canada
+NT-1014,Shipping Delay,High,Logistics,Canada
+NT-1015,Login Failure,Low,Hardware,Canada
+NT-1016,Login Failure,High,Hardware,EU
+NT-1017,API Rate Limit,Critical,Billing,Canada
+NT-1018,API Rate Limit,Low,Hardware,US
+NT-1019,API Rate Limit,Critical,Infrastructure,US
+NT-1020,Subscription Upgrade,Low,Security,EU
+NT-1021,Login Failure,Medium,Infrastructure,EU
+NT-1022,Subscription Upgrade,Critical,Hardware,UK
+NT-1023,Login Failure,High,Billing,India
+NT-1024,Subscription Upgrade,Low,Hardware,US
+NT-1025,Shipping Delay,High,Security,EU
+NT-1026,Refund Request,Medium,Infrastructure,Canada
+NT-1027,Screen Flicker,Medium,Billing,India
+NT-1028,API Rate Limit,Critical,Billing,US
+NT-1029,Subscription Upgrade,High,Logistics,EU
+NT-1030,Shipping Delay,High,Hardware,Canada
+NT-1031,Login Failure,High,Hardware,UK
+NT-1032,Login Failure,Low,Logistics,US
+NT-1033,Screen Flicker,Critical,Billing,EU
+NT-1034,Shipping Delay,Low,Logistics,UK
+NT-1035,Shipping Delay,Medium,Billing,US
+NT-1036,Shipping Delay,Medium,Security,UK
+NT-1037,Shipping Delay,High,Hardware,Canada
+NT-1038,Screen Flicker,Low,Infrastructure,UK
+NT-1039,Shipping Delay,Low,Security,UK
+NT-1040,Shipping Delay,Critical,Infrastructure,UK
+NT-1041,API Rate Limit,Low,Billing,UK
+NT-1042,Screen Flicker,Medium,Billing,US
+NT-1043,Screen Flicker,Medium,Security,US
+NT-1044,Shipping Delay,Low,Security,Canada
+NT-1045,Screen Flicker,Low,Security,US
+NT-1046,Refund Request,Low,Billing,UK
+NT-1047,Refund Request,Low,Security,US
+NT-1048,Subscription Upgrade,Critical,Billing,India
+NT-1049,Subscription Upgrade,Critical,Hardware,Canada
+NT-1050,Subscription Upgrade,Critical,Infrastructure,EU
+NT-1051,Login Failure,Low,Security,Canada
+NT-1052,Refund Request,Low,Hardware,Canada
+NT-1053,Screen Flicker,Low,Hardware,EU
+NT-1054,Shipping Delay,High,Infrastructure,Canada
+NT-1055,Refund Request,Medium,Infrastructure,US
+NT-1056,Subscription Upgrade,Critical,Hardware,EU
+NT-1057,Login Failure,High,Hardware,India
+NT-1058,API Rate Limit,Critical,Security,Canada
+NT-1059,Screen Flicker,Medium,Logistics,Canada
+NT-1060,Login Failure,High,Logistics,US
+NT-1061,Subscription Upgrade,Medium,Hardware,UK
+NT-1062,Refund Request,Low,Security,Canada
+NT-1063,Refund Request,High,Security,Canada
+NT-1064,Shipping Delay,Critical,Infrastructure,Canada
+NT-1065,API Rate Limit,Medium,Logistics,Canada
+NT-1066,Screen Flicker,High,Logistics,US
+NT-1067,Refund Request,Medium,Billing,EU
+NT-1068,Subscription Upgrade,Medium,Security,EU
+NT-1069,Login Failure,Medium,Logistics,EU
+NT-1070,Screen Flicker,High,Billing,EU
+NT-1071,Screen Flicker,High,Infrastructure,US
+NT-1072,Login Failure,High,Infrastructure,EU
+NT-1073,Screen Flicker,Critical,Infrastructure,Canada
+NT-1074,Shipping Delay,Critical,Billing,India
+NT-1075,Screen Flicker,Medium,Logistics,India
+NT-1076,Screen Flicker,Critical,Hardware,India
+NT-1077,Subscription Upgrade,Medium,Security,US
+NT-1078,Shipping Delay,Medium,Security,India
+NT-1079,Subscription Upgrade,High,Hardware,India
+NT-1080,API Rate Limit,High,Infrastructure,EU
+NT-1081,Subscription Upgrade,Medium,Infrastructure,EU
+NT-1082,Refund Request,Medium,Security,Canada
+NT-1083,Login Failure,Critical,Infrastructure,Canada
+NT-1084,API Rate Limit,Critical,Hardware,US
+NT-1085,Screen Flicker,High,Security,EU
+NT-1086,Screen Flicker,Critical,Security,Canada
+NT-1087,Refund Request,Low,Logistics,EU
+NT-1088,API Rate Limit,Medium,Billing,India
+NT-1089,Screen Flicker,High,Hardware,Canada
+NT-1090,Subscription Upgrade,High,Hardware,UK
+NT-1091,API Rate Limit,High,Security,Canada
+NT-1092,Shipping Delay,Critical,Infrastructure,Canada
+NT-1093,Login Failure,Low,Hardware,Canada
+NT-1094,Subscription Upgrade,Low,Infrastructure,India
+NT-1095,Refund Request,Low,Hardware,India
+NT-1096,Subscription Upgrade,High,Infrastructure,Canada
+NT-1097,Refund Request,Critical,Logistics,India
+NT-1098,Refund Request,Medium,Security,Canada
+NT-1099,Screen Flicker,High,Security,EU
+NT-1100,Login Failure,Low,Billing,EU

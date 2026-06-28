@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NovaTech Enterprise Support</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f8fafc; }
+        #chat-container { max-width: 600px; margin: auto; background: white; border: 1px solid #cbd5e1; border-radius: 8px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        #header { background: #0f172a; color: white; padding: 15px; font-weight: bold; text-align: center; border-radius: 8px 8px 0 0; }
+        #chat-box { height: 400px; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+        .message { padding: 10px 14px; border-radius: 6px; max-width: 80%; word-wrap: break-word; }
+        .user-msg { background: #0284c7; color: white; align-self: flex-end; }
+        .ai-msg { background: #f1f5f9; color: #1e293b; align-self: flex-start; border: 1px solid #e2e8f0; }
+        #input-area { display: flex; padding: 15px; border-top: 1px solid #e2e8f0; }
+        #user-input { flex: 1; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; }
+        #send-btn { background: #0f172a; color: white; border: none; padding: 10px 20px; margin-left: 10px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        #send-btn:hover { background: #1e293b; }
+    </style>
+</head>
+<body>
+
+    <div id="chat-container">
+        <div id="header">NovaTech Enterprise Support Platform</div>
+        <div id="chat-box">
+            <div class="message ai-msg">Hello! I am your NovaTech Multi-Agent assistant. How can I help you today?</div>
+        </div>
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="Type your support request here..." autocomplete="off">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatBox = document.getElementById('chat-box');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+
+        // Generate a random user session ID to maintain persistent conversation threads
+        const userId = "user_" + Math.floor(Math.random() * 100000);
+
+        async function sendMessage() {
+            const messageText = userInput.value.trim();
+            if (!messageText) return; // Ignore empty clicks
+
+            // 1. Instantly display user's message on the screen
+            appendMessage(messageText, 'user-msg');
+            userInput.value = ''; // Clear input field Immediately
+
+            // 2. Display a temporary loading placeholder
+            const loadingDiv = appendMessage('Thinking...', 'ai-msg');
+
+            try {
+                // 3. Send data to your Flask route API endpoint via POST
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        user_id: userId,
+                        message: messageText
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                
+                loadingDiv.innerText = data.reply;
+
+            } catch (error) {
+                console.error("Communication error:", error);
+                loadingDiv.innerText = "❌ Connection failed. Ensure your Flask server is running.";
+                loadingDiv.style.color = "red";
+            }
+            
+            // Auto-scroll to the bottom of the chat box
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function appendMessage(text, className) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${className}`;
+            msgDiv.innerText = text;
+            chatBox.appendChild(msgDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+            return msgDiv;
+        }
+
+        // --- Hook event listeners to capture interaction triggers ---
+        sendBtn.addEventListener('click', sendMessage);
+
+        // Allow sending messages by pressing the Enter key inside the text field
+        userInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>

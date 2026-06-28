@@ -1,0 +1,11 @@
+
+NovaTech Premium Escalation Rules
+
+1. Enterprise outages must be acknowledged within 15 minutes.
+2. Premium customers bypass Tier-1 support queues.
+3. Repeated refund disputes require fraud screening.
+4. Security incidents involving administrator accounts require immediate SOC escalation.
+5. Customers with annual contracts may receive service credits instead of direct reimbursements.
+6. Hardware replacement approval requires diagnostic logs and serial verification.
+7. API abuse incidents are escalated to infrastructure engineering.
+8. Priority customers located in regulated industries require compliance-aware handling.
